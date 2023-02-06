@@ -12,6 +12,7 @@
 // import Navbar from "./components/Navbar/Navbar";  <Navbar />
 import React from "react";
 import Jury from "./components/Jury/Jury";
+import JuryIteam from "./components/Jury/JuryItem";
 import List from "./components/List/List";
 import ReadMore from "./components/ReadMore/ReadMore";
 
@@ -19,8 +20,8 @@ function App() {
   return (
     <div>
       <ReadMore />
-      <List />
-      <Jury />
+
+      <JuryIteam />
     </div>
   );
 }
