@@ -11,12 +11,14 @@
 // import Heading from "./components/Heading/Heading"; <Heading />
 // import Navbar from "./components/Navbar/Navbar";  <Navbar />
 import React from "react";
+import List from "./components/List/List";
 import ReadMore from "./components/ReadMore/ReadMore";
 
 function App() {
   return (
     <div>
       <ReadMore />
+      <List />
     </div>
   );
 }
