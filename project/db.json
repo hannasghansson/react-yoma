@@ -2,7 +2,7 @@
   "jury": [
     {
       "id": 3050391865,
-      "": "https://yomacenter.se/wp-content/uploads/2022/05/StenCranner_fotoDanHolmqvist_GSO.jpg",
+      "img": "https://yomacenter.se/wp-content/uploads/2022/05/StenCranner_fotoDanHolmqvist_GSO-1024x683.jpg",
       "firstName": "Sten",
       "lastName": "Cranner",
       "titel": "Head of the jury",
@@ -29,7 +29,7 @@
     },
     {
       "id": 996881427,
-      "": "https://yomacenter.se/wp-content/uploads/2022/06/perivarsson-glad_750x750_acf_cropped.jpg",
+      "img": "https://www.gso.se/wp-content/uploads/2016/09/perivarsson-glad_750x750_acf_cropped.jpg",
       "firstName": "Per",
       "lastName": "Ivarsson",
       "titel": "Brass",
