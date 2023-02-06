@@ -31,7 +31,7 @@ const ReadMore = () => {
                   height: 35,
                   objectFit: "cover",
                   objectPosition: "center",
-                  borderRadius: 32,
+                  borderRadius: 35,
                 }}
                 src="https://img.freepik.com/free-vector/cute-baby-lion-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3783.jpg?w=1060&t=st=1675430518~exp=1675431118~hmac=8a2a842d984a92808a19e34fffa63d666b3e43785fac01e7ca1fd2c6ebcddfbd"
                 alt="teacher"
