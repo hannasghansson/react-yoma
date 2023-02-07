@@ -30,7 +30,7 @@ class ListItem extends Component {
     }));
   };
 
-  renderCorrectImg = () => {
+  renderActiveIcon = () => {
     const { isActive } = this.state;
     const icons = isActive ? ArrowUpIcon : ArrowDownIcon;
     const TextInstead = isActive ? "Read Less" : "Read More";
@@ -87,7 +87,7 @@ class ListItem extends Component {
             </div>
 
             <div className="d-flex align-items-center">
-              {this.renderCorrectImg()}
+              {this.renderActiveIcon()}
             </div>
           </div>
 
