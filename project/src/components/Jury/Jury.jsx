@@ -1,6 +1,6 @@
 import React from "react";
-import ListItem from "./ListItem";
 import Heading from "../Heading/Heading";
+import JuryItem from "./JuryItem";
 
 const JuryData = [
   {
@@ -8,7 +8,7 @@ const JuryData = [
     img: "https://yomacenter.se/wp-content/uploads/2022/05/StenCranner_fotoDanHolmqvist_GSO-1024x683.jpg",
     name: "Sten Cranner",
     titel: "Head of the jury",
-    instrument: "",
+    instrument: "NaN",
     country: "Sweden",
     description:
       "Polstjärnepriset welcomes Sten Cranner as head of the jury. Cranner is general manager and artistic director of the Gothenburg Symphony Orchestra, where he has been planning manager since 2010. He was general manager of the Bergen Philharmonic Orchestra in 2006-2010 and orchestral manager of the Gothenburg Symphony Orchestra in 2003-2007. Before that, he was project manager at the Oslo Philharmonic in 2000-2002, and he has also worked with other professional ensembles in Norway. Cranner has been head of the Polstjärnepriset jury on several occasions and initiated the current collaboration between Polstjärnepriset and the Gothenburg Symphony Orchestra.",
@@ -19,6 +19,7 @@ const JuryData = [
     name: "Camilla Lundberg",
     titel: "Assistant head of the jury",
     country: "Norway/Sweden",
+    instrument: "NaN",
     description:
       "Polstjärnepriset welcomes Camilla Lundberg as assistant head of the jury. Camilla is a well-known culture personality in the press, radio and television. She has a solid background as a music critic at Dagens Nyheter, Expressen and Kulturnyheterna, SVT. On Swedish radio she can be heard in the popular “Klassiska podden” and among the music experts in “CD-revyn”. Camilla Lundberg has long experience from jury work: in addition to several music competitions also the Guldbagge Awards, Prix Italia and Rose d’Or. As an amateur cellist, she enjoys playing string quartets.",
   },
@@ -26,6 +27,7 @@ const JuryData = [
     id: 566073352,
     img: "https://yomacenter.se/wp-content/uploads/2022/06/randi-2048x1365.jpg",
     name: "Randi Krogvold Lundqvist",
+    titel: "NaN",
     instrument: "Woodwinds",
     country: "Norway",
     description:
@@ -35,6 +37,7 @@ const JuryData = [
     id: 4288427256,
     img: "https://www.gso.se/wp-content/uploads/2016/09/perivarsson-glad_750x750_acf_cropped.jpg",
     name: "Per Ivarsson",
+    titel: "NaN",
     instrument: "Brass",
     country: "Sweden",
     description:
@@ -42,17 +45,17 @@ const JuryData = [
   },
 ];
 
-const List = () => {
+const Jury = () => {
   return (
     <section className="container py-5">
-      <Heading Heading="List" />
+      <Heading Heading="Jury" />
       <ul className="list-unstyled  col-md-12 col-lg-8">
         {JuryData.map((eachMember) => (
-          <ListItem key={eachMember.id} juryData={eachMember} />
+          <JuryItem key={eachMember.id} juryData={eachMember} />
         ))}
       </ul>
     </section>
   );
 };
 
-export default List;
+export default Jury;

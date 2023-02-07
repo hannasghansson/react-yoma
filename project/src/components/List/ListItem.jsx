@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-//img
+//Icons
 const ArrowDownIcon = <IoIosArrowDown />;
-//const ReadMoreImg ="https://p.kindpng.com/picc/s/238-2389096_arrow-down-small-icon-down-open-png-transparent.png";
 const ArrowUpIcon = <IoIosArrowUp />;
-
-//const ReadLessImg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Tu0Cnicndj2VBDKpVsJ_NTivQgvhbC52zq1et_GPeR-EbC1pw2LUZEiqm7B45nYEsXo&usqp=CAU";
 
 class ListItem extends Component {
   state = {
@@ -33,29 +30,17 @@ class ListItem extends Component {
   renderActiveIcon = () => {
     const { isActive } = this.state;
     const icons = isActive ? ArrowUpIcon : ArrowDownIcon;
-    const TextInstead = isActive ? "Read Less" : "Read More";
+    //const TextInstead = isActive ? "Read Less" : "Read More";  Få text om inte icons fungera?
 
     return (
       <button
-        className="button bg-transparent"
+        className="button bg-transparent "
         style={{ border: "none" }}
         type="button"
         onClick={this.onToggleDescription}
       >
         {icons}
-        {/* <img
-          style={{
-            width: 20,
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-          className="image"
-          src={image}
-          alt={TextInstead}
-        /> */}
       </button>
-
-      //
     );
   };
 
@@ -64,36 +49,36 @@ class ListItem extends Component {
     const { name, img, country } = juryData;
 
     return (
-      <article className=" container border-bottom mt-2">
-        <li>
-          <div className="d-flex">
-            <div className="d-flex-shrink-0">
-              <img
-                style={{
-                  width: 55,
-                  height: 55,
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  borderRadius: 55,
-                }}
-                src={img}
-                alt="/"
-              />
-            </div>
+      <div className="border-bottom">
+        <div className="d-flex align-items-center gap-2 mt-4">
+          <img
+            style={{
+              width: 50,
+              height: 50,
+              objectFit: "cover",
+              objectPosition: "center",
+              borderRadius: 50,
+            }}
+            src={img}
+            alt="/"
+          />
 
-            <div className="ms-3">
-              <p className="mb-0">{name}</p>
-              <p>{country}</p>
-            </div>
-
-            <div className="d-flex align-items-center">
-              {this.renderActiveIcon()}
-            </div>
+          <div className="w-100">
+            <p className="mb-0">{name}</p>
+            <span className="d-flex gap-2 mb-1">
+              <span>{country}</span>
+              <span>•</span>
+              <span>Test</span>
+            </span>
           </div>
 
-          {this.renderDescription()}
-        </li>
-      </article>
+          <span className="col-auto">{this.renderActiveIcon()}</span>
+        </div>
+
+        <div>
+          <p className="text-muted p-2">{this.renderDescription()}</p>
+        </div>
+      </div>
     );
   }
 }

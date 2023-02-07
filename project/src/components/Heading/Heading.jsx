@@ -1,16 +1,16 @@
 import React from "react";
 
-const Heading = () => {
+function Heading(props) {
   return (
-    <section className="container mb-5">
+    <section className="mb-5">
       <span>Span</span>
-      <h1>Heading</h1>
+      <h1>{props.Heading}</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
     </section>
   );
-};
+}
 
 export default Heading;

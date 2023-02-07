@@ -1,6 +1,6 @@
 import React from "react";
-import ListItem from "./ListItem";
 import Heading from "../Heading/Heading";
+import ListImgItem from "./ListImgItem";
 
 const JuryData = [
   {
@@ -42,17 +42,17 @@ const JuryData = [
   },
 ];
 
-const List = () => {
+const ListImg = () => {
   return (
-    <section className="container py-5">
-      <Heading Heading="List" />
+    <section className="container">
+      <Heading Heading="List w. img" />
       <ul className="list-unstyled  col-md-12 col-lg-8">
         {JuryData.map((eachMember) => (
-          <ListItem key={eachMember.id} juryData={eachMember} />
+          <ListImgItem key={eachMember.id} juryData={eachMember} />
         ))}
       </ul>
     </section>
   );
 };
 
-export default List;
+export default ListImg;
