@@ -19,6 +19,11 @@ const ReadMore = () => {
       <div className="border-bottom">
         <div className="row">
           <div className="col-auto">
+            <div
+              onClick={() => {
+                setReadMore(!readMore);
+              }}
+            ></div>
             <img
               className="img-fluid"
               style={{
@@ -68,13 +73,8 @@ const ReadMore = () => {
           <h6 className="col d-flex justify-content-start align-items-start">
             Namn Efternamn
           </h6>
-          <div
-            onClick={() => {
-              setReadMore(!readMore);
-            }}
-          >
-            <span className="col-auto">{linkName}</span>
-          </div>
+
+          <span className="col-auto">{linkName}</span>
 
           <p>{readMore && content}</p>
         </div>

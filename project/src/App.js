@@ -1,68 +1,85 @@
-//import "./App.css";
+//import Heading from "./components/Heading/Heading"; <Heading />;
+//import Navbar from "./components/Navbar/Navbar"; <Navbar />;
 
-// Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-// tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-// veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-// commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-// velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-// occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-// mollit anim id est laborum
+//import Jury from "./components/Jury/Jury";
+//import JuryIteam from "./components/Jury/JuryItem";
 
-// import Heading from "./components/Heading/Heading"; <Heading />
-// import Navbar from "./components/Navbar/Navbar";  <Navbar />
-import React from "react";
-import Jury from "./components/Jury/Jury";
-import JuryIteam from "./components/Jury/JuryItem";
-import List from "./components/List/List";
-import ReadMore from "./components/ReadMore/ReadMore";
-
-function App() {
-  return (
-    <div>
-      <ReadMore />
-
-      <JuryIteam />
-    </div>
-  );
-}
-
-export default App;
-// import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
+//import ReadMore from "./components/ReadMore/ReadMore";     <ReadMore />
 // function App() {
-//   const [readMore, setReadMore] = useState(false);
-//   const extraContent = (
-//     <div>
-//       <p className="extra-content">
-//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
-//         consectetur neque ab porro quasi culpa nulla rerum quis minus
-//         voluptatibus sed hic ad quo sint, libero commodi officia aliquam!
-//         Maxime.
-//       </p>
-//     </div>
-//   );
-//   const linkName = readMore ? <IoIosArrowUp /> : <IoIosArrowDown />;
-//   return (
-//     <div className="App ">
-//       <div className="container">
-//         <div className="row border-bottom">
-//           <div className="col me-0">
-//             <h2 className="me-0">Namn Efternamn</h2>
-//           </div>
-//           <div
-//             className="col"
-//             onClick={() => {
-//               setReadMore(!readMore);
-//             }}
-//           >
-//             <h2>{linkName}</h2>
-//           </div>
-//         </div>
-
-//         <div>{readMore && extraContent}</div>
-//       </div>
-//     </div>
-//   );
+//   return <div className="App "></div>;
 // }
 
 // export default App;
+
+// import React from "react";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>List</h1>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+//import "./App.css";
+
+import List from "./components/List/List";
+// import TheJuryItem from "./FaqItem/FaqItem";
+
+// const faqsData = [
+//   {
+//     id: 1288620200,
+//     img: "https://yomacenter.se/wp-content/uploads/2022/05/StenCranner_fotoDanHolmqvist_GSO-1024x683.jpg",
+//     name: "Sten Cranner",
+//     titel: "Head of the jury",
+//     instrument: "",
+//     country: "Sweden",
+//     description:
+//       "Polstjärnepriset welcomes Sten Cranner as head of the jury. Cranner is general manager and artistic director of the Gothenburg Symphony Orchestra, where he has been planning manager since 2010. He was general manager of the Bergen Philharmonic Orchestra in 2006-2010 and orchestral manager of the Gothenburg Symphony Orchestra in 2003-2007. Before that, he was project manager at the Oslo Philharmonic in 2000-2002, and he has also worked with other professional ensembles in Norway. Cranner has been head of the Polstjärnepriset jury on several occasions and initiated the current collaboration between Polstjärnepriset and the Gothenburg Symphony Orchestra.",
+//   },
+//   {
+//     id: 3949692139,
+//     img: "https://yomacenter.se/wp-content/uploads/2022/05/camillalundberg.jpg",
+//     name: "Camilla Lundberg",
+//     titel: "Assistant head of the jury",
+//     country: "Norway/Sweden",
+//     description:
+//       "Polstjärnepriset welcomes Camilla Lundberg as assistant head of the jury. Camilla is a well-known culture personality in the press, radio and television. She has a solid background as a music critic at Dagens Nyheter, Expressen and Kulturnyheterna, SVT. On Swedish radio she can be heard in the popular “Klassiska podden” and among the music experts in “CD-revyn”. Camilla Lundberg has long experience from jury work: in addition to several music competitions also the Guldbagge Awards, Prix Italia and Rose d’Or. As an amateur cellist, she enjoys playing string quartets.",
+//   },
+//   {
+//     id: 3091632770,
+//     img: "https://yomacenter.se/wp-content/uploads/2022/06/randi-2048x1365.jpg",
+//     name: "Randi Krogvold Lundqvist",
+//     instrument: "Woodwinds",
+//     country: "Norway",
+//     description:
+//       "Randi Krogvold Lundqvist has a deep and versatile background as a musician and teacher, with a special focus on talent development. She is currently head of the wind department at Barratt Due Musikkinstitutt in Oslo and has for many years held the same position at Valdres sommersymfoni. Randi studied at the Norwegian Academy of Music, has worked in all the major Norwegian orchestras and performed at leading festivals in Norway and abroad.",
+//   },
+//   {
+//     id: 4104208969,
+//     img: "https://www.gso.se/wp-content/uploads/2016/09/perivarsson-glad_750x750_acf_cropped.jpg",
+//     name: "Per Ivarsson",
+//     instrument: "Brass",
+//     country: "Sweden",
+//     description:
+//       "Per Ivarsson is the Principal Trumpet of the Gothenburg Symphony Orchestra and teaches at the Academy of Music and Drama, Gothenburg University. In 2015-2016 he served as Principal Trumpet of the Oslo Philharmonic and began his soloist diploma studies under professor Håkan Hardenberger in Malmö. After that he moved to Karlsruhe, where he had the opportunity to explore baroque repertoire on original instruments, as well as contemporary music with Ensemble Phoenix in Basel. On his return to Sweden, he was appointed Co-Principal Trumpet of the Malmö Symphony Orchestra, and won his current position in Gothenburg a few years later.",
+//   },
+// ];
+
+const App = () => (
+  // <div className="container">
+  //   <div>
+  //     <ul className="list-unstyled">
+  //       {faqsData.map((eachFaq) => (
+  //         <TheJuryItem key={eachFaq.id} faqData={eachFaq} />
+  //       ))}
+  //     </ul>
+  //   </div>
+  <div>
+    <List />
+  </div>
+);
+
+export default App;

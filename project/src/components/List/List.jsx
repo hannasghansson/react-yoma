@@ -1,59 +1,57 @@
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import React, { useState } from "react";
+import React from "react";
+import ListItem from "./ListItem";
+import Heading from "../Heading/Heading";
+
+const JuryData = [
+  {
+    id: 1504221460,
+    img: "https://yomacenter.se/wp-content/uploads/2022/05/StenCranner_fotoDanHolmqvist_GSO-1024x683.jpg",
+    name: "Sten Cranner",
+    titel: "Head of the jury",
+    instrument: "",
+    country: "Sweden",
+    description:
+      "Polstjärnepriset welcomes Sten Cranner as head of the jury. Cranner is general manager and artistic director of the Gothenburg Symphony Orchestra, where he has been planning manager since 2010. He was general manager of the Bergen Philharmonic Orchestra in 2006-2010 and orchestral manager of the Gothenburg Symphony Orchestra in 2003-2007. Before that, he was project manager at the Oslo Philharmonic in 2000-2002, and he has also worked with other professional ensembles in Norway. Cranner has been head of the Polstjärnepriset jury on several occasions and initiated the current collaboration between Polstjärnepriset and the Gothenburg Symphony Orchestra.",
+  },
+  {
+    id: 522558645,
+    img: "https://yomacenter.se/wp-content/uploads/2022/05/camillalundberg.jpg",
+    name: "Camilla Lundberg",
+    titel: "Assistant head of the jury",
+    country: "Norway/Sweden",
+    description:
+      "Polstjärnepriset welcomes Camilla Lundberg as assistant head of the jury. Camilla is a well-known culture personality in the press, radio and television. She has a solid background as a music critic at Dagens Nyheter, Expressen and Kulturnyheterna, SVT. On Swedish radio she can be heard in the popular “Klassiska podden” and among the music experts in “CD-revyn”. Camilla Lundberg has long experience from jury work: in addition to several music competitions also the Guldbagge Awards, Prix Italia and Rose d’Or. As an amateur cellist, she enjoys playing string quartets.",
+  },
+  {
+    id: 566073352,
+    img: "https://yomacenter.se/wp-content/uploads/2022/06/randi-2048x1365.jpg",
+    name: "Randi Krogvold Lundqvist",
+    instrument: "Woodwinds",
+    country: "Norway",
+    description:
+      "Randi Krogvold Lundqvist has a deep and versatile background as a musician and teacher, with a special focus on talent development. She is currently head of the wind department at Barratt Due Musikkinstitutt in Oslo and has for many years held the same position at Valdres sommersymfoni. Randi studied at the Norwegian Academy of Music, has worked in all the major Norwegian orchestras and performed at leading festivals in Norway and abroad.",
+  },
+  {
+    id: 4288427256,
+    img: "https://www.gso.se/wp-content/uploads/2016/09/perivarsson-glad_750x750_acf_cropped.jpg",
+    name: "Per Ivarsson",
+    instrument: "Brass",
+    country: "Sweden",
+    description:
+      "Per Ivarsson is the Principal Trumpet of the Gothenburg Symphony Orchestra and teaches at the Academy of Music and Drama, Gothenburg University. In 2015-2016 he served as Principal Trumpet of the Oslo Philharmonic and began his soloist diploma studies under professor Håkan Hardenberger in Malmö. After that he moved to Karlsruhe, where he had the opportunity to explore baroque repertoire on original instruments, as well as contemporary music with Ensemble Phoenix in Basel. On his return to Sweden, he was appointed Co-Principal Trumpet of the Malmö Symphony Orchestra, and won his current position in Gothenburg a few years later.",
+  },
+];
 
 const List = () => {
-  const [readMore, setReadMore] = useState(false);
-  const content = (
-    <div>
-      <p className="extra-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
-        consectetur neque ab porro quasi culpa nulla rerum quis minus
-        voluptatibus sed hic ad quo sint, libero commodi officia aliquam!
-        Maxime.
-      </p>
-    </div>
-  );
-  const linkName = readMore ? <IoIosArrowUp /> : <IoIosArrowDown />;
   return (
-    <div class="container">
-      <div class="row d-flex justify-content-center mt-5 ">
-        <div class="col-md-12">
-          <div class="border-bottom my-1">
-            <div class="d-flex justify-content-between align-items-center ">
-              <div class="d-flex flex-row align-items-center ">
-                <img
-                  className="me-3"
-                  style={{
-                    width: 50,
-                    height: 50,
-                    objectFit: "cover",
-                    objectPosition: "center",
-                    borderRadius: 50,
-                  }}
-                  src="https://img.freepik.com/free-vector/cute-baby-lion-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3783.jpg?w=1060&t=st=1675430518~exp=1675431118~hmac=8a2a842d984a92808a19e34fffa63d666b3e43785fac01e7ca1fd2c6ebcddfbd"
-                  alt="teacher"
-                />
-                <div class="d-flex flex-column">
-                  <h5 className="m-0">Namn Efternamn</h5>
-                  <div class="d-flex flex-row align-items-center time-text">
-                    <p className="m-0">Lorem Ipsum</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                onClick={() => {
-                  setReadMore(!readMore);
-                }}
-              >
-                <span>{linkName}</span>
-              </div>
-            </div>
-
-            <p className="my-3">{readMore && content}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section>
+      <Heading />
+      <ul className="list-unstyled">
+        {JuryData.map((eachMember) => (
+          <ListItem key={eachMember.id} juryData={eachMember} />
+        ))}
+      </ul>
+    </section>
   );
 };
 
