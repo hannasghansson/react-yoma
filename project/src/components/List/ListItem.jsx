@@ -65,28 +65,30 @@ class ListItem extends Component {
 
     return (
       <article className=" container border-bottom mt-2">
-        <li className="d-flex">
-          <div className="d-flex-shrink-0">
-            <img
-              style={{
-                width: 55,
-                height: 55,
-                objectFit: "cover",
-                objectPosition: "center",
-                borderRadius: 55,
-              }}
-              src={img}
-              alt="/"
-            />
-          </div>
+        <li>
+          <div className="d-flex">
+            <div className="d-flex-shrink-0">
+              <img
+                style={{
+                  width: 55,
+                  height: 55,
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  borderRadius: 55,
+                }}
+                src={img}
+                alt="/"
+              />
+            </div>
 
-          <div className="ms-3">
-            <p className="mb-0">{name}</p>
-            <p>{country}</p>
-          </div>
+            <div className="ms-3">
+              <p className="mb-0">{name}</p>
+              <p>{country}</p>
+            </div>
 
-          <div className="d-flex align-items-center">
-            {this.renderCorrectImg()}
+            <div className="d-flex align-items-center">
+              {this.renderCorrectImg()}
+            </div>
           </div>
 
           {this.renderDescription()}
