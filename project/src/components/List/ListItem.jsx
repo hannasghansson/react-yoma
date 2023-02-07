@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 //img
-const ReadMoreImg =
-  "https://p.kindpng.com/picc/s/238-2389096_arrow-down-small-icon-down-open-png-transparent.png";
-const ReadLessImg =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Tu0Cnicndj2VBDKpVsJ_NTivQgvhbC52zq1et_GPeR-EbC1pw2LUZEiqm7B45nYEsXo&usqp=CAU";
+const ArrowDownIcon = <IoIosArrowDown />;
+//const ReadMoreImg ="https://p.kindpng.com/picc/s/238-2389096_arrow-down-small-icon-down-open-png-transparent.png";
+const ArrowUpIcon = <IoIosArrowUp />;
+
+//const ReadLessImg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Tu0Cnicndj2VBDKpVsJ_NTivQgvhbC52zq1et_GPeR-EbC1pw2LUZEiqm7B45nYEsXo&usqp=CAU";
 
 class ListItem extends Component {
   state = {
@@ -31,17 +32,18 @@ class ListItem extends Component {
 
   renderCorrectImg = () => {
     const { isActive } = this.state;
-    const image = isActive ? ReadLessImg : ReadMoreImg;
-    const altText = isActive ? "minus" : "plus";
+    const icons = isActive ? ArrowUpIcon : ArrowDownIcon;
+    const TextInstead = isActive ? "Read Less" : "Read More";
 
     return (
       <button
-        className="button"
-        style={{ border: "none", backgroundColor: "white" }}
+        className="button bg-transparent"
+        style={{ border: "none" }}
         type="button"
         onClick={this.onToggleDescription}
       >
-        <img
+        {icons}
+        {/* <img
           style={{
             width: 20,
             objectFit: "cover",
@@ -49,8 +51,8 @@ class ListItem extends Component {
           }}
           className="image"
           src={image}
-          alt={altText}
-        />
+          alt={TextInstead}
+        /> */}
       </button>
 
       //
@@ -63,8 +65,8 @@ class ListItem extends Component {
 
     return (
       <article className=" container border-bottom mt-2">
-        <li className="row">
-          <div className="col">
+        <li className="d-flex">
+          <div className="d-flex-shrink-0">
             <img
               style={{
                 width: 55,
@@ -78,12 +80,14 @@ class ListItem extends Component {
             />
           </div>
 
-          <div className="col">
+          <div className="ms-3">
             <p className="mb-0">{name}</p>
             <p>{country}</p>
           </div>
 
-          <div className="col">{this.renderCorrectImg()}</div>
+          <div className="d-flex align-items-center">
+            {this.renderCorrectImg()}
+          </div>
 
           {this.renderDescription()}
         </li>
