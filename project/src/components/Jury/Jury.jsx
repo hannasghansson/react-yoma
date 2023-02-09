@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../Heading/Heading";
+import Heading from "../../layout/Heading/Heading";
 import JuryItem from "./JuryItem";
 
 const JuryData = [

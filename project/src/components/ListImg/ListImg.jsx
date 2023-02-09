@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../Heading/Heading";
+import Heading from "../../layout/Heading/Heading";
 import ListImgItem from "./ListImgItem";
 
 const JuryData = [
@@ -44,7 +44,7 @@ const JuryData = [
 
 const ListImg = () => {
   return (
-    <section className="container">
+    <section className="container py-5">
       <Heading Heading="List w. img" />
       <ul className="list-unstyled  col-md-12 col-lg-8">
         {JuryData.map((eachMember) => (

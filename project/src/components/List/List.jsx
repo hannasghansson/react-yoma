@@ -1,6 +1,6 @@
 import React from "react";
 import ListItem from "./ListItem";
-import Heading from "../Heading/Heading";
+import Heading from "../../layout/Heading/Heading";
 
 const JuryData = [
   {
